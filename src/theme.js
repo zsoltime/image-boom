@@ -1,0 +1,15 @@
+export default {
+  black: '#363636',
+  blue: '#709ed1',
+  boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.1)',
+  grey: '#eceef0',
+  lightBlue: '#dbecff',
+  lightGrey: '#ebebeb',
+  lightRed: '#d88c8c',
+  maxWidth: '1280px',
+  maxWidthSmall: '616px',
+  offWhite: '#f7f9f5',
+  red: '#ef272c',
+  transition: '0.3s cubic-bezier(1, -0.65, 0, 2.25)',
+  transitionEase: '0.3s ease-in-out',
+};
