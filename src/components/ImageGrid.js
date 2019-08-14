@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Image from './Image';
 
@@ -17,5 +18,19 @@ const ImageGrid = ({ images }) => (
     ))}
   </Grid>
 );
+
+ImageGrid.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      downloads: PropTypes.number.isRequired,
+      favorites: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+      user: PropTypes.string.isRequired,
+      userImageURL: PropTypes.string,
+      views: PropTypes.number.isRequired,
+      webformatURL: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
 export default ImageGrid;

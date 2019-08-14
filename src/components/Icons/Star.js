@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Star = ({ className, color, size }) => (
   <svg
@@ -21,6 +22,11 @@ const Star = ({ className, color, size }) => (
 Star.defaultProps = {
   color: 'currentColor',
   size: '16px',
+};
+
+Star.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Star;

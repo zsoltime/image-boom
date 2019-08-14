@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Download = ({ className, color, size }) => (
   <svg
@@ -21,6 +22,11 @@ const Download = ({ className, color, size }) => (
 Download.defaultProps = {
   color: 'currentColor',
   size: '16px',
+};
+
+Download.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Download;

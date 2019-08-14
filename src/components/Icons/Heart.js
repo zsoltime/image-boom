@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Heart = ({ className, color, size }) => (
   <svg
@@ -21,6 +22,11 @@ const Heart = ({ className, color, size }) => (
 Heart.defaultProps = {
   color: 'currentColor',
   size: '16px',
+};
+
+Heart.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Heart;

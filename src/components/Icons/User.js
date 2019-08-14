@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const User = ({ className, color, size }) => (
   <svg
@@ -21,6 +22,11 @@ const User = ({ className, color, size }) => (
 User.defaultProps = {
   color: 'currentColor',
   size: '16px',
+};
+
+User.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default User;

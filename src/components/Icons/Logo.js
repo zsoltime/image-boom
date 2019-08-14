@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Logo = ({ className, color, size }) => (
   <svg
@@ -24,6 +25,11 @@ const Logo = ({ className, color, size }) => (
 Logo.defaultProps = {
   color: 'currentColor',
   size: '16px',
+};
+
+Logo.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Logo;

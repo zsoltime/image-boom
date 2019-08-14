@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Download from './Icons/Download';
 import Heart from './Icons/Heart';
@@ -114,5 +115,19 @@ const Image = ({
     </Meta>
   </Card>
 );
+
+Image.defaultProps = {
+  userImageURL: null,
+};
+
+Image.propTypes = {
+  downloads: PropTypes.number.isRequired,
+  favorites: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
+  user: PropTypes.string.isRequired,
+  userImageURL: PropTypes.string,
+  views: PropTypes.number.isRequired,
+  webformatURL: PropTypes.string.isRequired,
+};
 
 export default Image;

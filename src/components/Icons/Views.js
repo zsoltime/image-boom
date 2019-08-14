@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Views = ({ className, color, size }) => (
   <svg
@@ -32,6 +33,11 @@ const Views = ({ className, color, size }) => (
 Views.defaultProps = {
   color: 'currentColor',
   size: '16px',
+};
+
+Views.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default Views;
