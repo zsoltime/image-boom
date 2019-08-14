@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import ImageGrid from './ImageGrid';
 import Message from './Message';
+import SearchBox from './SearchBox';
 import Wrapper from './Wrapper';
 
 import initialImages from '../initialImages';
@@ -23,11 +24,6 @@ const LoadMoreButton = styled.button`
   margin: 0 auto 1rem;
   max-width: ${({ theme }) => theme.maxWidthSmall};
   width: 100%;
-`;
-
-const SearchBox = styled.section`
-  background-color: ${({ theme }) => theme.black};
-  padding: 1rem 0;
 `;
 
 const StyledMain = styled.main`
@@ -112,21 +108,7 @@ function App() {
 
   return (
     <StyledMain>
-      <SearchBox>
-        <Wrapper>
-          <Form onSubmit={handleSubmit} role="search">
-            <input
-              type="search"
-              aria-label="Search images"
-              maxLength="100"
-              onChange={e => setQuery(e.target.value)}
-              placeholder="e.g. space cats"
-              value={query}
-            />
-            <button type="submit">Search</button>
-          </Form>
-        </Wrapper>
-      </SearchBox>
+      <SearchBox onSubmit={handleSubmit} />
       <Wrapper>
         {isLoading && <div>Loading...</div>}
         {error && <Message error>{error}</Message>}
